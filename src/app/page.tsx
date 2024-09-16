@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from 'react'; 
 
-import ProductList from '../../component/ProductList'; 
-import data from '../../../db.json'; 
+import ProductList from '../component/ProductList'; 
+import data from '../../db.json'; 
 
-import styles from '../../styles/products/ProductsPage.module.css'; 
+import styles from '../styles/products/ProductsPage.module.css'; 
 
 interface Product {
   id: number;
