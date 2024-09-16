@@ -47,7 +47,7 @@ const ProductDetailPage = () => {
   if (!product) return <div className={styles.notFound}>Producto no encontrado</div>;
 
     const handleBack = () => {
-      router.push('/products');
+      router.push('/');
     };
 
   return (
