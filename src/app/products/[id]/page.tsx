@@ -20,6 +20,7 @@ interface Product {
 
 const ProductDetailPage = () => {
   const { id } = useParams();
+  const router = useRouter();
 
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
@@ -45,8 +46,6 @@ const ProductDetailPage = () => {
   if (loading) return <div className={styles.loading}>Loading...</div>;
   if (error) return <div className={styles.error}>{error}</div>;
   if (!product) return <div className={styles.notFound}>Producto no encontrado</div>;
-
-  const router = useRouter();
 
     const handleBack = () => {
       router.push('/products');
