@@ -7,7 +7,6 @@ import ProductDetail from '../../../component/ProductDetail';
 
 import styles from '../../../styles/products/ProductDetailPage.module.css';
 
-
 interface Product {
   id: number;
   titulo: string;
@@ -32,7 +31,7 @@ const ProductDetailPage = () => {
     const fetchProduct = async () => {
       try {
         const data = await fetchProductById(id as string);
-        setProduct(data);
+        setProduct(data);  
       } catch (err: any) {
         setError(err.message);
       } finally {

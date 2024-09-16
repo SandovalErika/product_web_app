@@ -1,10 +1,11 @@
+import data from '../../db.json';
+
 export const fetchProductById = async (id: string) => {
+  await new Promise((resolve) => setTimeout(resolve, 500));
 
-  const pictureId = Number(id) - 1
-
-  const response = await fetch(`http://localhost:5000/${pictureId}`);
-  if (!response.ok) {
-    throw new Error('Error al cargar el producto');
+  const product = data.find((el: any) => el.id === parseInt(id));
+  if (!product) {
+    throw new Error('Producto no encontrado');
   }
-  return response.json();
+  return product;
 };
